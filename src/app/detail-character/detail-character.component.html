@@ -1,0 +1,13 @@
+<h2>{{ detailCharacter?.name }}</h2>
+<p>id : {{ detailCharacter?.id }}</p>
+<p>status : {{ detailCharacter?.status }}</p>
+<p>species : {{ detailCharacter?.species }}</p>
+<p>type : {{ detailCharacter?.type }}</p>
+<p>gender : {{ detailCharacter?.gender }}</p>
+<p>origin : {{ detailCharacter?.origin.name }}</p>
+<p>location : {{ detailCharacter?.location.name }}</p>
+<div><img src="{{ detailCharacter?.image }}"></div>
+<p>episode : {{ detailCharacter?.episode }}</p>
+<p>url : {{ detailCharacter?.url }}</p>
+<p>created : {{ detailCharacter?.created }}</p>
+<a routerLink="/characters">Back to list</a>
