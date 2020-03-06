@@ -31,4 +31,12 @@ export class DetailCharacterComponent implements OnInit {
       );
   }
 
+  getEpisode() {
+    for (var index in this.detailCharacter?.episode) {
+      (this.detailCharacter?.episode)[index]=(this.detailCharacter?.episode)[index].replace('https://rickandmortyapi.com/api/episode/','');
+    }
+
+    return this.detailCharacter?.episode;
+  }
+
 }

@@ -1,0 +1,45 @@
+a {
+  text-decoration: none;
+}
+
+li.character-list {
+  color: black;
+  font-family: "Baskerville Old Face";
+  font-size: 18.5px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 00px 90px 0px 0px;
+  list-style-type:none;
+  border: 3px groove darkgray;
+  height: 160px;
+  width: 80%;
+  float: right;
+}
+
+h2 {
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+li img {
+  float: left;
+  height: 160px;
+}
+
+li {
+  overflow: auto;
+}
+
+li:hover {
+  background: #E8EFBB;
+  cursor: pointer;
+}
+
+span.status {
+  color: #91CF7B;
+  font-weight: bold;
+}
+
+span.gender {
+  color: #00B0C8;
+  font-weight: bold;
+}

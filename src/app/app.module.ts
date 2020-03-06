@@ -9,7 +9,7 @@ import { DetailCharacterComponent } from './detail-character/detail-character.co
 import { Routes, RouterModule } from '@angular/router';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { FilterCharacterComponent } from './filter-character/filter-character.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: 'characters', component: CharacterPageComponent },

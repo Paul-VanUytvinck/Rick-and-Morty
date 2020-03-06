@@ -1,0 +1,40 @@
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+div.filter-box {
+  width: 15%;
+  position: fixed;
+}
+
+div.pages {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  position: fixed;
+}
+
+button.btn-primary {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 50px;
+  background-color: darkgray;
+  border: none;
+  font-weight: bold;
+  border-radius: 12px;
+  color: #E8EFBB;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+div.espace {
+  height: 200px;
+}

@@ -1,18 +1,26 @@
-<app-filter-character (filter)="onFilter($event)"></app-filter-character>
+<img src="https://help.redbubble.com/hc/article_attachments/360002309526/Rick_and_Morty_-_logo__English_.png">
+
+<div class="filter-box">
+  <app-filter-character (filter)="onFilter($event)" (filter_init)="onFilterInit($event)"></app-filter-character>
+</div>
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <h2>All characters :</h2>
       <ul class="list-group">
-        <app-character  *ngFor="let character of characterPage?.results" [character]='character'></app-character>
+        <app-character *ngFor="let character of characterPage?.results" [character]='character'></app-character>
       </ul>
     </div>
   </div>
 </div>
-<button class="btn btn-primary" *ngIf="!isFirstPage()" (click)="goToSpecifiedPage(1)">First page</button>
-<button class="btn btn-primary" *ngIf="!isFirstPage()" (click)="goToSpecifiedPage(currentPage-1)">Previous page</button>
-<button class="btn btn-primary" *ngIf="!isLastPage()" (click)="goToSpecifiedPage(currentPage+1)">Next page</button>
-<button class="btn btn-primary" *ngIf="!isLastPage()" (click)="goToSpecifiedPage(characterPage.info.pages)">Last page</button>
-<div align="center">
-  <p>Pages : {{ currentPage }} on {{ characterPage?.info.pages }}</p>
+
+<div class="espace">
+</div>
+
+<div class="pages">
+  <button class="btn btn-primary" *ngIf="!isFirstPage()" (click)="goToSpecifiedPage(1)">First page</button>
+  <button class="btn btn-primary" *ngIf="!isFirstPage()" (click)="goToSpecifiedPage(currentPage-1)">Previous page</button>
+  <button class="btn btn-primary" *ngIf="!isLastPage()" (click)="goToSpecifiedPage(currentPage+1)">Next page</button>
+  <button class="btn btn-primary" *ngIf="!isLastPage()" (click)="goToSpecifiedPage(characterPage.info.pages)">Last page</button>
+  <p class="pages">Pages : {{ currentPage }} on {{ characterPage?.info.pages }}</p>
 </div>

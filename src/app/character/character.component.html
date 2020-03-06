@@ -1,4 +1,11 @@
-<li>
-  <a [routerLink]="[character.id]">{{ character.name }}</a>
-  <h4>{{ character.status }} -- {{ character.species }} -- {{ character.type }} -- {{ character.gender }}</h4>
-</li>
+<a [routerLink]="[character.id]">
+  <li class="character-list">
+    <img src="{{ character?.image }}"/>
+    <h2>{{ character.name }}</h2>
+    <p>
+      <span class="status">{{ character.status }}</span>
+      <span>/</span>
+      <span class="gender">{{ character.gender }}</span>
+    </p>
+  </li>
+</a>

@@ -1,13 +1,64 @@
-<h2>{{ detailCharacter?.name }}</h2>
-<p>id : {{ detailCharacter?.id }}</p>
-<p>status : {{ detailCharacter?.status }}</p>
-<p>species : {{ detailCharacter?.species }}</p>
-<p>type : {{ detailCharacter?.type }}</p>
-<p>gender : {{ detailCharacter?.gender }}</p>
-<p>origin : {{ detailCharacter?.origin.name }}</p>
-<p>location : {{ detailCharacter?.location.name }}</p>
-<div><img src="{{ detailCharacter?.image }}"></div>
-<p>episode : {{ detailCharacter?.episode }}</p>
-<p>url : {{ detailCharacter?.url }}</p>
-<p>created : {{ detailCharacter?.created }}</p>
-<a routerLink="/characters">Back to list</a>
+<div class="container">
+
+  <div class="identity">
+    <h2>{{ detailCharacter?.name }}</h2>
+    <p>id : {{ detailCharacter?.id }}</p>
+  </div>
+
+  <div class="main-content">
+
+    <div class="col1">
+
+      <img src="{{ detailCharacter?.image }}">
+
+    </div>
+
+
+    <div class="col2">
+
+      <div class="main-information">
+        <div class="row1">
+          <div class="status">
+            <p>{{ detailCharacter?.status }}</p>
+          </div>
+          <div class="gender">
+            <p>{{ detailCharacter?.gender }}</p>
+          </div>
+        </div>
+        <div class="row1">
+          <div class="col3">
+          <p>species : {{ detailCharacter?.species }}</p>
+          </div>
+            <div class="col3">
+          <p>type : {{ detailCharacter?.type }}</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="episode">
+        <p>Seen in episodes :</p>
+        <p>{{ getEpisode() }}</p>
+      </div>
+
+      <div class="locations">
+        <div class="col3">
+        <p>origin : {{ detailCharacter?.origin.name }}</p>
+        </div>
+          <div class="col3">
+        <p>location : {{ detailCharacter?.location.name }}</p>
+          </div>
+      </div>
+
+      <div class="created">
+        <p>created : {{ detailCharacter?.created }}</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="back-to-list">
+    <a routerLink="/characters">Back to list</a>
+  </div>
+
+</div>

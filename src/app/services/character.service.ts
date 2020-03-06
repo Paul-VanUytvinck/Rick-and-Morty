@@ -10,7 +10,7 @@ export class CharacterService {
 constructor(private httpClient: HttpClient) { }
 
   getFilteredCharacterPageFromServer(url: string, statusFilter: string, genderFilter: string) {
-    return this.httpClient.get<CharacterPageModel>(url.concat(statusFilter==''?(genderFilter==''?'':'&gender='+genderFilter):(genderFilter==''?'&status='+statusFilter:'&status='+statusFilter+'&gender='+genderFilter)));
+    return this.httpClient.get<CharacterPageModel>(url.concat(!statusFilter?(!genderFilter?'':'&gender='+genderFilter):(!genderFilter?'&status='+statusFilter:'&status='+statusFilter+'&gender='+genderFilter)));
   }
 
   getSingleCharacterFromServer(url: string) {

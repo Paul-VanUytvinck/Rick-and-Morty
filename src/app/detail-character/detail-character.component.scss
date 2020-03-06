@@ -1,0 +1,74 @@
+div.container {
+  width: 55%;
+  margin: auto;
+  padding-top: 8%;
+  font-family: "Baskerville Old Face";
+  text-transform: uppercase;
+}
+
+div.identity {
+  text-align: center;
+}
+
+div.main-content {
+  display: flex;
+  background-color: #E8EFBB;
+}
+
+div.back-to-list {
+  padding-top: 2%;
+  text-align: center;
+}
+
+div.col1 {
+  padding-top: 0.5%;
+  width: 40%;
+}
+
+img {
+  width: 100%;
+  border: 3px darkgray solid;
+}
+
+div.col2 {
+  padding-top: 5%;
+  padding-left: 0.5%;
+  width: 60%;
+}
+
+div.row1 {
+  display: flex;
+}
+
+div.col3 {
+  width: 50%;
+  text-align: center;
+}
+
+div.locations {
+  display: flex;
+}
+
+div.created {
+  text-align: center;
+  padding-top: 1.5%;
+}
+
+div.episode {
+  height: 25%;
+  padding-top: 1%;
+  text-align: center;
+  border: 3px darkgray solid;
+}
+
+div.status {
+  width: 50%;
+  text-align: center;
+  background-color: #91CF7B;
+}
+
+div.gender {
+  width: 50%;
+  text-align: center;
+  background-color: #00B0C8;
+}

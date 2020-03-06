@@ -1,24 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import {CharacterService} from "../services/character.service";
 import {CharacterPageModel} from "../models/character-page.model";
 import { FormGroup } from '@angular/forms';
+import { OnDestroyService } from '../services/on-destroy.service';
 
 @Component({
   selector: 'app-character-page',
   templateUrl: './character-page.component.html',
   styleUrls: ['./character-page.component.scss']
 })
-export class CharacterPageComponent implements OnInit {
+export class CharacterPageComponent implements OnInit, OnDestroy {
 
   characterPage: CharacterPageModel;
-  currentPage: number = 1;
-  statusFilter: string = '';
-  genderFilter: string = '';
+  currentPage: number;
+  statusFilter: string;
+  genderFilter: string;
 
-  constructor(private characterService: CharacterService) { }
+  constructor(private characterService: CharacterService, private onDestroyService: OnDestroyService) { }
 
   ngOnInit() {
-    this.goToSpecifiedPage(this.currentPage);
+    this.currentPage = this.onDestroyService.currentPage;
+  }
+
+  ngOnDestroy(): void {
+    this.onDestroyService.currentPage = this.currentPage;
   }
 
   loadCharacterPage(url: string) {
@@ -58,6 +63,12 @@ export class CharacterPageComponent implements OnInit {
     this.statusFilter=characterFilter.get('statusFilter').value;
     this.genderFilter=characterFilter.get('genderFilter').value;
     this.goToSpecifiedPage(1);
+  }
+
+  onFilterInit(characterFilter: FormGroup) {
+    this.statusFilter=characterFilter.get('statusFilter').value;
+    this.genderFilter=characterFilter.get('genderFilter').value;
+    this.goToSpecifiedPage(this.currentPage);
   }
 
 }
